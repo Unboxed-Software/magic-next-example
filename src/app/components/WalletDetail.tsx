@@ -1,6 +1,4 @@
-"use client"
 import { useEffect, useState } from "react"
-// import { Text, Flex, Divider } from "@chakra-ui/react"
 import { useWeb3 } from "../context/Web3Context"
 import { useUser } from "../context/UserContext"
 
@@ -33,7 +31,7 @@ const WalletDetail = () => {
 
   // Render the account address and balance
   return (
-    <div className="w-1/2 border border-white rounded-md p-2">
+    <div>
       <p>Address: {user}</p>
       <p>Balance: {balance} ETH</p>
     </div>

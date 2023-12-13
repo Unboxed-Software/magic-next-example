@@ -11,16 +11,16 @@ import { useUser } from "../app/context/UserContext"
 export default function Home() {
   const { user } = useUser()
   return (
-    <main className="flex flex-col gap-10">
+    <main>
       {user ?
-        <div>
+        <div className="p-2 flex flex-col w-[40vw] mx-auto">
           <WalletDetail />
           <ShowUIButton />
-          <DisconnectButton />
           <SignMessage />
+          <DisconnectButton />
         </div>
         :
-        <div>
+        <div className="p-2">
           <ConnectButton />
         </div>
       }

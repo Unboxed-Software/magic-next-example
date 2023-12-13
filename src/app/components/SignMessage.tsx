@@ -1,6 +1,4 @@
-"use client"
-import { useState, useRef } from "react"
-// import { HStack, Box, VStack, Input, Button, Text } from "@chakra-ui/react"
+import { useState } from "react"
 import { useWeb3 } from "../context/Web3Context"
 import { useUser } from "../context/UserContext"
 
@@ -36,13 +34,11 @@ const SignMessage = () => {
 
   // Render the component
   return (
-    <>
-      <div className="flex flex-col">
-        <input className="w-40 text-black" type="text" onChange={handleInput} maxLength={20} placeholder="Set Message" />
-        <button type="button" className="border border-white font-bold p-2 rounded-md" onClick={handleSignMessage}>Sign Message</button>
-      </div>
-      {signature && <div className="w-1/3 break-words mx-auto text-center">{`Signature: ${signature}`}</div>}
-    </>
+    <div className="py-2 flex flex-col gap-2">
+      <input className="text-black" type="text" onChange={handleInput} maxLength={20} placeholder="Set Message" />
+      <button type="button" className="border border-white font-bold p-2 rounded-md" onClick={handleSignMessage}>Sign Message</button>
+      {signature && <div className="w-[20vw] break-words mx-auto text-center">{`Signature: ${signature}`}</div>}
+    </div>
   )
 }
 

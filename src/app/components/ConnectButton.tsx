@@ -1,4 +1,3 @@
-"use client"
 import { magic } from "../libs/magic"
 import { useWeb3 } from "../context/Web3Context"
 

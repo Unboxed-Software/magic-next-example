@@ -4,9 +4,7 @@ import { Magic } from "magic-sdk"
 export let magic: Magic | undefined
 
 if (typeof window !== 'undefined') {
-  // Add rpcURL to the Content Security Policy if not whitelisted
-  // https://magic.link/docs/wallets/security/content-security-policy
-  magic = new Magic(process.env.API_KEY || "", {
+  magic = new Magic(process.env.NEXT_PUBLIC_MAGIC_API_KEY || "", {
     network: {
       rpcUrl: "https://rpc2.sepolia.org/",
       chainId: 11155111,
