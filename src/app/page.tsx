@@ -22,7 +22,7 @@ export default function Home() {
           <DisconnectButton />
         </div>
       ) : (
-        <div className="p-2">
+        <div className="p-2 text-center">
           <ConnectButton />
         </div>
       )}
