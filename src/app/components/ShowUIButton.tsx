@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react"
-import { magic } from "../libs/magic"
+import { useMagic } from "../context/MagicProvider"
 
 const ShowUIButton = () => {
   // Initialize state variable to decide whether to show button or not
   const [showButton, setShowButton] = useState(false)
+  const { magic } = useMagic()
 
   // Define a function to check the type of the wallet
   const checkWalletType = async () => {
@@ -40,7 +41,14 @@ const ShowUIButton = () => {
   }
 
   // Render the button component if showButton is true, otherwise render nothing
-  return showButton ? <button className="w-auto border border-white font-bold p-2 rounded-md" onClick={handleShowUI}>Show UI</button> : null
+  return showButton ? (
+    <button
+      className="w-auto border border-white font-bold p-2 rounded-md"
+      onClick={handleShowUI}
+    >
+      Show UI
+    </button>
+  ) : null
 }
 
 export default ShowUIButton
