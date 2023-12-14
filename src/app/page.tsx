@@ -12,7 +12,7 @@ import SendTransaction from "./components/SendTransaction"
 export default function Home() {
   const { user } = useUser()
   return (
-    <main>
+    <main className="min-h-screen">
       {user ? (
         <div className="p-2 flex flex-col w-[40vw] mx-auto">
           <WalletDetail />
